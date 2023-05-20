@@ -117,3 +117,15 @@
 #### Fechar todas as sessões do tmux
 
     $ tmux kill-server
+    
+#### Fazer um "detach" do tmux sem encerrar a sessão
+    
+    $ CTRL + Espaço > D
+    
+#### Listar todas as sessões tmux
+
+    $ tmux ls
+    
+#### Voltar para uma sessão específica
+
+    $ tmux attach-session -t número-da-sessão
