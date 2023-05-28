@@ -79,3 +79,46 @@
     
     *Os comandos de sair/salvar/sair sem salvar podem ser aplicados a vários arquivos
     Ex: :wa :wqa :qa!
+
+## Find/Replace
+
+#### Buscar um texto e substituir em todo o arquivo (um item por linha)
+    :%s/texto-atual/texto-novo
+
+#### Buscar um texto e substituir tudo que encontrar em todo o arquivo 
+    :%s/texto-atual/texto-novo/g
+    
+
+#### Buscar um texto e substituir (confirmar antes da substituicao) 
+    :%s/texto-atual/texto-novo/gc
+    
+#### Substituir texto dentro das linhas selecionadas 
+    # Aperte : e após os simbolos que já aparecem no input <:'<,'>> digite:
+    s/texto-atual/texto-novo
+    
+    # Exemplo
+    :'<,'>s/text-center/text-right
+    
+#### Apagar todas as linhas que contem uma palavra
+    :%g/texto-a-deletar/d
+    
+    # Exemplo apagando todas as divs
+    :%g/div/d
+    
+#### Apagar todas as linhas que NÃO contem uma palavra
+    :%v/texto-a-deletar/d
+    
+    # Exemplo apagando todas as divs
+    :%v/div/d
+    
+#### Substituir em varios arquivos (Necessario plugin Telescope)
+    # Abrir tela de busca por conteudo dentro dos arquivos
+    f + g
+    
+    # Apos a busca apertar:
+    ctrl + q
+    
+    # Apertar : e digitar o seguinte:
+    cdo s/texto-atual/texto-novo
+    
+    # Pode-se usar o /g para substituir todos resultos de uma mesma linha e /c para confirmar antes de substituir
